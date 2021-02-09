@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Header = "Your Favorite Restaurants!";
+}
+
+@model IEnumerable<Restaurant___Assignment_4.Models.AddRest>
+
+
+
+<div>
+    <h2 style="padding-left:20px">Here is the list!</h2>
+    <!-- Displays the user inputted restaurant list and formats all the information into a table.  -->
+    <table style="padding-left:20px">
+        <thead>
+            <tr><th>Name</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Phone Number</th>
+        </thead>
+
+        <tbody>
+            @foreach (Restaurant___Assignment_4.Models.AddRest x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestName</td>
+                    <td>@x.Dish</td>
+                    <td>@x.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

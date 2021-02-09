@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @ViewBag.Title
+    <!-- Bootstrap styling -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Navigation heading for each page in the web app -->
+    <h1 class="text-center">@ViewBag.Header</h1>
+    <h3 class="text-center">
+        <a asp-action="Index">Home Page</a> &nbsp;&nbsp;
+        <a asp-action="AddRest">Add a Restaurant</a> &nbsp;&nbsp;
+        <a asp-action="RestList">Your Restaurants</a>
+    </h3>
+    <!-- Where each page will display their information  -->
+    @RenderBody()
+
+    <br />
+    <br />
+    <footer style="padding-left:20px"> Provo Restaurant Finder, Copyright 2021</footer>
+
+
+
+
+
+</body>
+</html>

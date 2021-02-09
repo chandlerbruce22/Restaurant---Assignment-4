@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Header = "Add your favorites to the list!";
+}
+
+@model Restaurant___Assignment_4.Models.AddRest
+<!-- HTML form for user inputs with corresponding asp action commands. -->
+<div>
+    <form asp-action="AddRest" method="post" style="padding-left:20px">
+        <div>
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="RestName"> RestName:</label>
+            <input asp-for="RestName" />
+        </div>
+
+        <div>
+            <label asp-for="Dish">Dish:</label>
+            <input asp-for="Dish" />
+        </div>
+
+        <div>
+            <label asp-for="Phone">Phone:</label>
+            <input asp-for="Phone" />
+        </div>
+
+        <!-- ASP validation summary -->
+        <div asp-validation-summary="All"></div>
+
+        <button type="submit">Submit Your Favorite Restaurant!</button>
+    </form>
+</div>

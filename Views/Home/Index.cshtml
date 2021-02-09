@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Header = "Top 5 Restaurants in the Provo Area!";
+}
+
+@model IEnumerable<string>
+
+
+<div>
+    <!-- For loop to print out each hardcoded restaurant within the restaurant model handled by the controller  -->
+    <ul>
+        @foreach (string i in Model)
+        {
+            <li>@i</li>
+        }
+    </ul>
+
+</div>
+
